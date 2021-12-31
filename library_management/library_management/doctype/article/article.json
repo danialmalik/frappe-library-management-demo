@@ -1,24 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:article_name",
  "creation": "2021-12-31 18:13:39.754681",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "article_name",
+  "column_break_2",
   "image",
   "author",
+  "publisher",
   "description",
   "isbn",
-  "status",
-  "publisher"
+  "section_break_8",
+  "status"
  ],
  "fields": [
   {
    "fieldname": "article_name",
    "fieldtype": "Data",
-   "label": "Article Name"
+   "label": "Article Name",
+   "unique": 1
   },
   {
    "fieldname": "image",
@@ -50,14 +54,24 @@
    "fieldname": "publisher",
    "fieldtype": "Data",
    "label": "Publisher"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-31 18:13:39.754681",
+ "modified": "2021-12-31 18:23:32.773562",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -71,6 +85,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1
   }
  ],
  "sort_field": "modified",
